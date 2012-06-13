@@ -16,6 +16,8 @@ div#animationBox {
 	width:650px;
 	height:400px;
 	background-color:rgba(2,68,67,1.00);	
+	background-image:url(http://www.jboss.org/dms/jbossway/carousel_jbossway_bkg.gif);
+	background-size:cover;
 	position:relative;
 }
 

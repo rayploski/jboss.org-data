@@ -1,21 +1,20 @@
-title:  The JBoss Way
+title: Data The JBoss Way
 author: Ray Ploski
-jira_key: WAY
-disqus: jboss-way
+disqus: jboss-data
 show_debug: true
-tagline: Developer faster The JBoss Way
+tagline: Data The JBoss Way
 description: Build modern applications more simply and productively.
 issue_tracker: https://issues.jboss.org/browse/WAY
-jbds_url: https://devstudio.jboss.com/earlyaccess/builds/development/5.0.0.Beta3/
-jbds_version: 5.0.0.v201205141759M-H140-Beta3
 jboss_wiki: https://community.jboss.org/wiki
-forge_url: http://www.jboss.org/forge
 eap6_url: http://www.redhat.com/promo/eap6beta/
 as7_url: http://www.jboss.org/as7
-errai_url: http://www.jboss.org/errai
-faces_url: http://www.jboss.org/richfaces
 weld_url: http://seamframework.org/Weld
-arquillian_url: http://www.jboss.org/arquillian
+drools_url: http://www.jboss.org/drools
+modeshape_url: http://www.jboss.org/modeshape
+transactions_url: http://www.jboss.org/jbosstm
+hibernate_url:  http://www.hibernate.org
+infinispan_url: http://www.jboss.org/infinispan
+jclouds_url: http://www.jclouds.org/
 
 
 haml:
