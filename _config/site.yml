@@ -28,17 +28,12 @@ google_plusone: true
 profiles:
   development:
     base_url: http://localhost:4242
-    jdf_url: http://www.jboss.org/jdf
-    ticketmonster_url:  http://ticketmonster-html5.rhcloud.com/desktop-index.html
-  proto:
-    base_url: http://people.redhat.com/~rploski/proto
-    jdf_url: http://www.jboss.org/jdf
-    ticketmonster_url:  http://ticketmonster-html5.rhcloud.com/desktop-index.html
+  test:
+    base_url: http://people.redhat.com/~rploski/data
     deploy:
       host: people.redhat.com
-      path: /home/remote/rploski/public_html/proto
+      path: /home/remote/rploski/public_html/data
   staging:
-    jdf_url: http://www.jboss.org/jdf
-    base_url:  http://developer-ray.rhcloud.com
-    ticketmonster_url: http://ticketmonster-html5.rhcloud.com/desktop-index.html 
+    jdf_url: http://www.jboss.org/data
+    base_url:  http://data-ray.rhcloud.com
 
