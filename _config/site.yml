@@ -1,0 +1,44 @@
+title:  The JBoss Way
+author: Ray Ploski
+jira_key: WAY
+disqus: jboss-way
+show_debug: true
+tagline: Developer faster The JBoss Way
+description: Build modern applications more simply and productively.
+issue_tracker: https://issues.jboss.org/browse/WAY
+jbds_url: https://devstudio.jboss.com/earlyaccess/builds/development/5.0.0.Beta3/
+jbds_version: 5.0.0.v201205141759M-H140-Beta3
+jboss_wiki: https://community.jboss.org/wiki
+forge_url: http://www.jboss.org/forge
+eap6_url: http://www.redhat.com/promo/eap6beta/
+as7_url: http://www.jboss.org/as7
+errai_url: http://www.jboss.org/errai
+faces_url: http://www.jboss.org/richfaces
+weld_url: http://seamframework.org/Weld
+arquillian_url: http://www.jboss.org/arquillian
+
+
+haml:
+  attr_wrapper: '"'
+  escape_attrs: :once
+textile: ['no_span_caps']
+disqus_generate_id: true
+google_plusone: true
+
+profiles:
+  development:
+    base_url: http://localhost:4242
+    jdf_url: http://www.jboss.org/jdf
+    ticketmonster_url:  http://ticketmonster-html5.rhcloud.com/desktop-index.html
+  proto:
+    base_url: http://people.redhat.com/~rploski/proto
+    jdf_url: http://www.jboss.org/jdf
+    ticketmonster_url:  http://ticketmonster-html5.rhcloud.com/desktop-index.html
+    deploy:
+      host: people.redhat.com
+      path: /home/remote/rploski/public_html/proto
+  staging:
+    jdf_url: http://www.jboss.org/jdf
+    base_url:  http://developer-ray.rhcloud.com
+    ticketmonster_url: http://ticketmonster-html5.rhcloud.com/desktop-index.html 
+

@@ -1,0 +1,58 @@
+-# TODO:  UGLY!  Create an extension that walks through the downloads and renders this.
+#download.modal.hide.fade
+  .modal-header
+    %button.close(data-dismiss="modal")X
+    %h3 Download
+    .modal-body
+      JBoss Developer Studio is a developer IDE that gives you all the tools you need to develop applications The JBoss Way.  With dozens of plugins for Java EE 6, JBoss Forge, mobile browser support, XML, Spring, Maven and many others.  Easily deploy to JBoss AS7 or EAP6 or even the cloud without leaving the IDE.
+      %hr
+      .platform
+        %ul
+          %li.multiplatform
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-universal-#{jbds_version}.jar"}Universal Multi-Platform
+            %span.multispec 
+              &nbsp;513M (
+              %a{:href=>"#{site.jbds_url}/jbdevstudio-product-universal-#{jbds_version}.jar.MD5"}MD5
+              )
+            %span.postnote
+              %a{:href=>"#64bnote"}SEE NOTE
+        
+          %li.windows
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-win32-#{jbds_version}.jar"}Windows 32-bit
+            &nbsp;&nbsp;328M (
+            %a.md5{:href=>"#{site.jbds_url}/jbdevstudio-product-win32-#{jbds_version}.jar.MD5"}MD5
+            )
+          %li.windows
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-win32-x86_64-#{jbds_version}.jar"}Windows 64-bit
+            &nbsp;&nbsp;318M (
+            %a{ :href=>"#{site.jbds_url}/jbdevstudio-product-win32-x86_64-#{jbds_version}.jar.MD5"}MD5
+            ) 
+            %span.postnote
+              %a{:href=>"#64bnote"}SEE NOTE
+          %li.linux
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-linux-gtk-#{jbds_version}.jar"}Linux 32-bit
+            &nbsp;328M (
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-linux-gtk-#{jbds_version}.jar.MD5"}MD5
+            )
+          %li.linux
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-linux-gtk-x86_64-#{jbds_version}.jar"}Linux 64-bit  
+            &nbsp;330M (
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-linux-gtk-x86_64-#{jbds_version}.jar.MD5"}MD5
+            )
+          %li.mac
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-macosx-cocoa-#{jbds_version}.jar"}Mac 32-bit Cocoa
+            &nbsp;331M (
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-macosx-cocoa-#{jbds_version}.jar.MD5"}MD5
+            )
+          %li.mac
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-macosx-cocoa-x86_64-#{jbds_version}.jar"}Mac 64-bit Cocoa
+            &nbsp;317M (
+            %a{:href=>"#{site.jbds_url}/jbdevstudio-product-macosx-cocoa-x86_64-#{jbds_version}.jar.MD5"}MD5
+            ) 
+            %span.postnote
+              %a{:href=>"#64bnote"}SEE NOTE
+        %hr    
+        .alert
+          %strong NOTE:
+          &nbsp;The Visual Page Editor does not run on 64-bit Windows or Mac. While the source editor does work, visual editing &amp; preview do not. If you require this, use the 32-bit version with a 32-bit JDK.
+-# End of nightmare.

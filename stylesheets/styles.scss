@@ -1,0 +1,102 @@
+// I gather this file is a starting point for the project.
+@import "bootstrap";
+
+// Include responsive Bootstrap styles
+// @import "bootstrap-responsive";
+
+
+.incognito{ 
+	display:none; 
+} 
+.modal{
+	z-index:10500;
+} 
+.modal-backdrop{
+	z-index:10400;
+}  
+.carousel-control { 	
+	position: absolute;
+	top: 40%;
+	left: 10px;
+	width: 40px;
+	height: 40px;
+	font-size: 60px;
+	font-weight: 100;
+	line-height: 30px;
+	text-align: center;
+	background: #222222;
+	border: 3px solid white;
+	-webkit-border-radius: 23px;
+	-moz-border-radius: 23px;
+	border-radius: 23px;
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+	z-index: 10; 
+}
+.carousel-control.right { 
+	left:auto; 
+	right:10px; 
+	margin-top:-20px
+}  
+.cta-download{ 
+	position:relative; 
+	top:-40px; 
+	text-align:right; 
+} 
+.hero-unit{ 
+	height:250px; 	
+	background-origin: padding-box; 
+}  
+.hero-unit img{ 	
+	margin-bottom:10px; 
+}  
+#hero-openshift { 
+	background-color:  #191919; 
+	background-image: url("https://openshift.redhat.com/app/images/mts.png"),url("http://www.jboss.org/dms/jbossway/carousel_openshift_bkg.gif"); 
+	background-clip: border-box, border-box; 
+	color:  white; 
+	background-repeat: repeat, repeat; 
+	background-size: cover, contain; 
+}    
+.openshift-brand-image { 	
+	background-image: url("http://www.jboss.org/dms/jbossway/carousel_openshift_bkg.gif") center top no-repeat transparent; 	
+	height: 90px; 	
+	margin-bottom: 11px; 
+} 
+#hero-aerogear{ 	
+	background-image: url("http://www.jboss.org/dms/jbossway/carousel_aerogear_bkg.gif"); 
+	background-clip: border-box, border-box; 
+} 
+#hero-jbossway{ 	
+	background-image: url("http://www.jboss.org/dms/jbossway/carousel_jbossway_bkg.gif"); 	
+	background-clip: border-box, border-box; color: white;
+} 
+#hero-mobile{ 	
+	background-image: url("http://www.jboss.org/dms/jbossway/carousel_mobile_bkg.gif"); 	
+	background-clip: border-box, border-box; color: white;  
+}  
+#hero-forge{ 	
+	background-image: url("/images/jdbs5_image.png"); 
+}  
+#hero-ticketmonster{ 	
+	background-image: url("http://www.jboss.org/dms/jbossway/carousel_ticketmonster_bkg.gif"); 	
+	background-clip: border-box, border-box; color: white; 
+} 
+#hero-errai{ 	
+	background-image: url("http://www.jboss.org/dms/jbossway/carousel_errai_bkg.gif"); 	
+	background-clip: border-box, border-box; 
+}  
+#hero-richfaces{ 	
+	background-image: url("http://www.jboss.org/dms/jbossway/carousel_richfaces_bkg.gif"); 	
+	background-clip: border-box, border-box; 
+} 
+#hero-arquillian { 	
+	background-image: url("http://www.jboss.org/dms/jbossway/carousel_arquillian_bkg.gif"); 	
+	background-clip: border-box, border-box; 
+} 
+.white { color:white; } 
+.clear-both{ clear:both; } 
+.shadow { 	-moz-box-shadow: 2px 2px 5px #000; 	-webkit-box-shadow: 2px 2px 5px #000; 	box-shadow: 2px 2px 5px #000; }  
+.rounded-corners{ 	-webkit-border-radius: 5px 5px 5px 5px; 	-moz-border-radius: 5px 5px 5px 5px; 	border-radius: 5px 5px 5px 5px; 	 } 
+.bottom-corners{ 	margin-bottom:10px; 	border-radius: 0px 0px 4px 4px; 	-moz-border-radius: 0px 0px 4px 4px; 	border-radius: 0px 0px 4px 4px; 	box-shadow: 3px 3px 3px #CCC; } 
+

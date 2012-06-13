@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Develop the JBoss Way</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Build modern applications more simply and productively." name="description" />
+    <meta content="all" name="robots" />
+    <link href="http://static.jboss.org/theme/css/common/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="http://static.jboss.org/theme/css/magnolia/project.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="http://static.jboss.org/theme/css/magnolia/clearspace_common.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="http://static.jboss.org/theme/css/magnolia/wide.css" media="only screen and (min-width: 1200px)" rel="stylesheet" type="text/css" />
+    <link href="http://static.jboss.org/theme/css/magnolia/small.css" media="only screen and (max-width: 980px)" rel="stylesheet" type="text/css" />
+    <link href="http://static.jboss.org/theme/css/magnolia/print.css" media="print" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:4242/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+    <link href="http://static.jboss.org/theme/css/common/org_common.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="http://localhost:4242/stylesheets/data.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://static.jboss.org/theme/js/magnolia/allinone.js" type="text/javascript"></script>
+    <script src="http://w.sharethis.com/button/buttons.js" type="text/javascript"></script>
+    <script src="http://static.jboss.org/theme/js/tabzilla.js" type="text/javascript"></script>
+    <script src="http://localhost:4242/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="http://localhost:4242/js/jquery.effects.core.js" type="text/javascript"></script>
+    <script src="http://localhost:4242/js/redhatdata.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <!-- added below js -->
+    <!--[if  lt IE 7]> ><script type="text/javascript"  src="http://static.jboss.org/theme/js/magnolia/maxWidthFixForIE6.js"></script><![endif] <![endif]-->
+    <script type="text/javascript">
+      //<![CDATA[
+         stLight.options({
+            publisher:'0c0850b9-23f0-4286-b05a-7593cc190675'
+         });
+         // initialise Superfish
+         $(document).ready(function() {
+             $('ul.sf-menu').superfish({
+                 delay:       300,                            // one second delay on mouseout
+                 animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation
+                 speed:       'fast',                          // faster animation speed
+                 autoArrows:  false,                           // disable generation of arrow mark-up
+                 dropShadows: false                            // disable drop shadows
+             });         setupPrimaryMenuItemActive();     });
+      //]]>
+    </script>
+  </head>
+  <body class="col-float3 nocol-layout" id="community">
+    <div id="wrapper">
+      <div id="maincontent-wrapper">
+        <!--#if expr='1<0' -->
+        <div id="awestructnavwrapper">
+        <div id="branding">
+          
+          <div id="logo"> 
+            <a href="http://www.jboss.org" title="Homepage"> 
+              <strong>JBoss Community</strong>
+              <span></span>
+            </a> 
+          </div>
+          <!-- end logo -->
+        <div id="primarynav">
+            <ul class="sf-menu">
+                <li id="primary-nav-home"> <a class="menu-title sf-with-ul" href="http://www.jboss.org/developer">Get Started</a></li>
+                <li id="primary-nav-getinvolved"> <a class="menu-title" href="http://www.jboss.org/contribute">Get Involved</a></li>
+                <li id="primary-nav-projects"> <a class="menu-title sf-with-ul" href="http://www.jboss.org/projects">Projects</a></li>
+                <li class="enterprise"> <a class="menu-title" href="http://www.redhat.com/products/jbossenterprisemiddleware">Products</a></li>
+            </ul>
+        </div><!-- END of primarynav -->
+        
+        <!-- Utility controls -->
+        <div id="nav-meta">
+        <ul>
+          <li id="jbssologininfo1"></li>
+          <li id="jbssologininfo2"></li> 
+        </ul>
+        </div>
+        <!-- end nav-meta --> 
+        <a href="http://www.jboss.org/" class="tabnav-opened" id="tab">Search</a>
+        
+        <!-- JBoss.org SSO login info. It needs span or div with 'jbssologininfo' id to fill it with info -->
+        <script type="text/javascript">
+        //<![CDATA[ 
+           jbossorgheader = {
+        
+             /* Highlight main header */ 
+             highlightMainNav: function() {
+               bodyTag = document.getElementsByTagName("body").item(0);
+               navitemId = "primary-nav-projects";
+               if ("community" == bodyTag.id) {
+                 navitemId = "primary-nav-home";
+               } else if ("getinvolved" == bodyTag.id) {
+                 navitemId = "primary-nav-getinvolved";
+               }
+               jbossorgheader.highlightMainNavByNavId(navitemId);
+             },
+        
+             highlightMainNavByNavId: function(navitemId) {
+               document.getElementById(navitemId).className = "current";
+             } 
+           }
+           jbossorgheader.highlightMainNav();
+        
+          function setSSOInfo(data) {
+            if (data) {
+              document.getElementById("jbssologininfo1").innerHTML = data.part1 + "|";
+              document.getElementById("jbssologininfo2").innerHTML = data.part2;
+            }
+          }
+          
+          if (typeof jbssoserverbase == 'undefined') {
+            var jbssoserverbase='https://sso.jboss.org';
+          }
+          
+          if (typeof jbssologouturl == 'undefined') {
+            var jbssologouturl = '';
+          }
+          
+          if (typeof jbssobackurl == 'undefined') {
+            var jbssobackurl = document.location.href;
+            if (document.location.hash.length > 0) {
+              jbssobackurl = jbssobackurl.replace(document.location.hash, "");
+            }
+          }
+          
+          if (typeof ssoData != 'undefined') {
+            setSSOInfo(ssoData);
+          } else {
+            var sso = document.createElement('script'); sso.type = 'text/javascript'; sso.async = true;
+            sso.src = jbssoserverbase + "/logininfo?backurl=" + escape(jbssobackurl) +"&lourl="+ escape(jbssologouturl) + "&callback=setSSOInfo";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(sso, s);
+          }
+        //]]>
+        </script>
+        </div>
+        </div><!-- end #branding -->
+        <!--#endif -->
+        <!--#include virtual="/theme/includes/org_header_topNav.html" -->
+        <div id="top_subnav_branding">
+          <div class="community-banner">
+            <a data-bitly-type="bitly_hover_card" href="http://localhost:4242/developer">
+              <img src="http://jboss.org/dms/jbossway/jbosswaybanner_1180px.png" />
+            </a>
+          </div>
+        </div>
+        <div id="wrapper-2">
+          <div id="wrap-content">
+            <div id="wrapper-3">
+              <div id="main-wrapper">
+                <div id="main">
+                  <!-- content title -->
+                  <script src="http://www.jboss.org/dms/jbossway/js/bootstrap.js" type="text/javascript"></script>
+                  <div id="animationBox"><!-- Main Box -->
+                  <div id="cdiHeading"></div>
+                  <div id="mainMenu"><!-- Outer Box For Main Menu -->
+                  <div id="relationalDiv">
+                  <a id="hibernateBtn">Hibernate</a>
+                  <a id="modeShapeJDBCBtn">ModeShape<br />JDBC</a>
+                  </div>
+                  <!-- Non-Relational Div is where where most of the menu links are placed to avoid overlap issues with the other 2 divs -->
+                  <div id="nonRelationalDiv">
+                  <!-- Main Non-Relational Buttons-->
+                  <a id="droolsBtn">Drools</a>
+                  <a id="modeShapeJCRBtn">ModeShape<br />JCR</a>
+                  <!--/End Non-Relational-->
+                  <!-- Overlap: Relational<->Non-Relational -->
+                  <a id="txBtn">TX</a>
+                  <a id="hibernateSearchBtn">Hibernate<br />Search<br />(FTS)</a>
+                  <!-- /End Overlap: Relational<->Non-Relational -->
+                  <!-- Overlap: Non-elational<->Cloud Storage -->
+                  <a id="infinispanBtn">Infinispan</a>
+                  <a id="ogmBtn">OGM</a>
+                  <!-- /End Overlap: Non-elational<->Cloud Storage -->
+                  
+                  </div>
+                  <div id="cloudDiv">
+                  <a id="jCloudsBtn">JClouds</a>
+                  <a id="cdmiBtn">CDMI</a>
+                  </div>
+                  </div><!-- / Close Outer Bos For Main Menu -->
+                  <!------------ Dialogs ------------>
+                  <!-- Drools -->
+                  
+                  <div id="droolsBox" class="displayBox">
+                  <h1>Drools</h1>
+                  <p>Drools is a rules engine implementation based on Charles Forgy's Rete algorithm tailored for the Java language. Adapting Rete to an object-oriented interface allows for more natural expression of business rules with regard to business objects. Drools is written in Java, but able to run on Java and .NET.  Drools is designed to allow pluggable language implementations. Currently, rules can be written in Java, MVEL, Python, and Groovy. Drools also provides for declarative programming and is flexible enough to match the semantics of the problem domain with domain specific languages (DSL) via XML using a schema defined for the problem domain. DSLs consist of XML elements and attributes that represent the problem domain.</p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / Drools -->
+                  
+                  <!-- ModeShapeJCR -->
+                  
+                  <div id="modeShapeJCRBox" class="displayBox">
+                  <h1>ModeShape JCR</h1>
+                  <p>ModeShape is an implementation that provides access to content stored in many different kinds of systems. A ModeShape repository isn't yet another silo of isolated information, but rather it's a JCR view of the information you already have in your environment: files systems, databases, other repositories, services, applications, etc.  To your applications, ModeShape looks and behaves like a regular JCR repository. Using the standard JCR API, applications can search, navigate, version, and listen for changes in the content.</p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / ModeShapeJCR -->
+                  
+                  
+                  <!-- Hibernate (regular) -->
+                  
+                  <div id="hibernateBox" class="displayBox">
+                  <h1>Hibernate</h1>
+                  <p>Hibernate is an Object/Relational Mapping solution for Java environments. The term Object/Relational Mapping refers to the technique of mapping data between an object model representation to a relational data model representation.  Hibernate takes care of the mapping from Java classes to database tables, and from Java data types to SQL data types. In addition, it provides data query and retrieval facilities. It can significantly reduce development time otherwise spent with manual data handling in SQL and JDBC.</p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / Hibernate (regular) -->
+                  
+                  
+                  <!-- Hibernate (regular) -->
+                  
+                  <div id="hibernateBox" class="displayBox">
+                  <h1>Hibernate</h1>
+                  <p>Hibernate is an Object/Relational Mapping solution for Java environments. The term Object/Relational Mapping refers to the technique of mapping data between an object model representation to a relational data model representation.  Hibernate takes care of the mapping from Java classes to database tables, and from Java data types to SQL data types. In addition, it provides data query and retrieval facilities. It can significantly reduce development time otherwise spent with manual data handling in SQL and JDBC.</p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / Hibernate (regular) -->
+                  
+                  <!-- ModeShapeJDBC -->
+                  <div id="modeShapeJDBCBox" class="displayBox">
+                  <h1>ModeShape JDBC</h1>
+                  <p>ModeShape is an implementation that provides access to content stored in many different kinds of systems. A ModeShape repository isn't yet another silo of isolated information, but rather it's a JCR view of the information you already have in your environment: files systems, databases, other repositories, services, applications, etc.  To your applications, ModeShape looks and behaves like a regular JCR repository. Using the standard JCR API, applications can search, navigate, version, and listen for changes in the content.</p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / ModeShapeJDBC -->
+                  
+                  
+                  <!-- TX -->
+                  <div id="txBox" class="displayBox">
+                  <h1>TX (Transactions)</h1>
+                  <p>The JBoss Transaction Service (JBossTS) protects businesses from data corruption by guaranteeing complete, accurate business transactions for Java based applications (including those written for the JEE and EJB frameworks) thereby eliminating the risks and costs associated with time-consuming manual reconciliation following failures.</p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / TX -->
+                  
+                  <!-- TX -->
+                  <div id="hibernateSearchBox" class="displayBox">
+                  <h1>Hibernate Search</h1>
+                  <p>Hibernate Search brings the power of full text search engines to the persistence domain model by combining Hibernate Core with the capabilities of the Apache Lucene™ search engine.  Full text search engines like Apache Lucene™ are very powerful technologies to add efficient free text search capabilities to applications. However, Lucene suffers several mismatches when dealing with object domain models. Amongst other things indexes have to be kept up to date and mismatches between index structure and domain model as well as query mismatches have to be avoided.</p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / TX -->
+                  
+                  
+                  <!-- OGM -->
+                  <div id="ogmBox" class="displayBox">
+                  <h1>OGM</h1>
+                  <p>MongoDB<br>
+                  Hadoop/HBase<br>
+                  Riak<br>
+                  Reis<br>
+                  Cassandra<br>
+                  CouchDB<br>
+                  Voldemort</p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / OGM -->
+                  
+                  <!-- Infinispan -->
+                  <div id="infinispanBox" class="displayBox">
+                  <h1>Infinispan</h1>
+                  <p>
+                  Infinispan is an extremely scalable, highly available data grid platform - 100% open source, and written in Java.  The purpose of Infinispan is to expose a data structure that is highly concurrent, designed ground-up to make the most of modern multi-processor/multi-core architectures while at the same time providing distributed cache capabilities.  At its core Infinispan exposes a Cache interface which extends java.util.Map.  It is also optionally is backed by a peer-to-peer network architecture to distribute state efficiently around a data grid.
+                  </p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / Infinispan -->
+                  
+                  
+                  <!-- JClouds -->
+                  <div id="jCloudsBox" class="displayBox">
+                  <h1>JClouds</h1>
+                  <p>
+                  Jclouds is an open source library that helps you get started in the cloud and reuse your java and clojure development skills. Our api allows you freedom to use portable abstractions or cloud-specific features. We test support of 30 cloud providers and cloud software stacks, including Amazon, GoGrid, Ninefold, vCloud, OpenStack, and Azure.
+                  </p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / JClouds -->
+                  
+                  <!-- CDMI -->
+                  <div id="cdmiBox" class="displayBox">
+                  <h1>CDMI</h1>
+                  <p>
+                  The Cloud Data Management Interface--better known as CDMI--is a SNIA standard that specifies a protocol for self-provisioning, administering and accessingcloud storage. CDMI defines an array of RESTful HTTP operations 
+                  </p>
+                  <a class="closeBtn"></a>
+                  </div>
+                  <!-- / CDMI -->
+                  </div>
+                  <div class="clear-both"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-left: 90px; padding-top: 20px; padding-bottom: 20px; clear:both;">
+            <h3>Travel along the JBoss Way…</h3>
+            <div style="float:left; width: 250px; padding-bottom: 30px;">
+              <h4>Learn</h4>
+              <ul style="margin-left: 5px; margin-top: 5px; padding: 0;">
+                <li style="list-style-type: none;">
+                  <a href="/developer/about.html">About The JBoss Way</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="/developer/about.html">Consulting &amp; Support</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="http://www.redhat.com/consulting/middleware/">Consulting and Support</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="http://www.redhat.com/training/paths/jboss-middleware-1.html">Training</a>
+                </li>
+                <li style=" list-style-type: none;">
+                  <a href="https://community.jboss.org/blogs">Blog</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="/developer/subscribe.html">Subscribe to the Newsletter</a>
+                </li>
+              </ul>
+            </div>
+            <div style="float:left;width:250px;">
+              <h4>Get Going</h4>
+              <ul style="margin-left: 5px; margin-top: 5px; padding: 0;">
+                <li style="list-style-type: none;">
+                  <a href="https://devstudio.jboss.com/earlyaccess">Get JBoss Developer Studio</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="/developer/quickstarts">Quickstarts</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="/developer/tutorials">Tutorials</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="http://docs.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/6/html/Beta_Documentation/index.html">Documentation</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="/developer/tutorials.html#migration-guides">Migrating</a>
+                </li>
+              </ul>
+            </div>
+            <div style="float:left; width: 250px;">
+              <h4>Get Involved</h4>
+              <ul style="margin-left: 5px; margin-top: 5px; padding: 0;">
+                <li style="list-style-type: none;">
+                  <a href="https://issues.jboss.org/browse/WAY">Issue Tracker</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="https://github.com/jboss/ticket-monster-tutorial">Source</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="http://www.jboss.org/jdf/jdf-users">Forums</a>
+                </li>
+                <li style="list-style-type: none;">
+                  <a href="http://www.jboss.org/contribute">Share The JBoss Way</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+      <div id="site-info">
+        <!--#if expr='1<0' -->
+        <div class="footer">
+           <p>Sponsored by </p>
+           <div id="footerlogo">
+              <a title="Red Hat, Inc." href="http://www.redhat.com" class="">
+                 <h6>Red Hat, Inc.</h6>
+              </a>
+            </div>
+          <p>
+            <a href="http://www.jboss.org/about.html">About</a>   |   
+            <a href="http://www.jboss.org/contact.html">Contact Us</a>   |  
+            <a href="http://www.redhat.com/about/work">Jobs</a>   |   
+            <a href="http://www.jboss.org/help.html">Help</a>
+          </p>
+        </div>
+        
+        <!-- begin eloqua tracking --> 
+        <script type='text/javascript' language='JavaScript' src='http://www.redhat.com/j/elqNow/elqCfg.js'></script> 
+        <script type='text/javascript' language='JavaScript' src='http://www.redhat.com/j/elqNow/elqImg.js'></script> 
+        <!-- end eloqua tracking -->
+        <!-- SiteCatalyst code version: H.21.
+        Copyright 1996-2010 Adobe, Inc. All Rights Reserved
+        More info available at http://www.omniture.com -->
+        <div id="oTags">
+        <!-- // **************************** CHANGE PAT BELOW TO YOUR SERVERS PATH -->
+        <script type="text/javascript" src="http://www.redhat.com/j/s_code.js"></script>
+        
+        <script><!--
+        /* You may give each page an identifying name, server, and channel on
+        the next lines. */
+        /* E-commerce Variables */
+        
+        /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+        var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+        
+        <script language="JavaScript" type="text/javascript"><!--
+        if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+        
+        //--></script><noscript><a href="http://www.omniture.com" title="Web
+        Analytics"><img src="https://smtrcs.redhat.com/b/ss/redhatjbossorg/1/H.21--NS/0?[AQB]&cdp=3&[AQE]"
+        height="1" width="1" border="0" alt="" /></a></noscript>
+        
+        <!--/DO NOT REMOVE/-->
+        </div>
+        
+        <!-- End SiteCatalyst code version: H.21. -->
+        
+        <!--#endif -->
+        <!--#include virtual="/theme/includes/org_footer2.html" -->
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://localhost:4242/js/bootstrap-collapse.js" type="text/javascript"></script>
+  </body>
+</html>
