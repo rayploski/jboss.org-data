@@ -19,6 +19,9 @@ div#animationBox {
 	background-image:url(http://www.jboss.org/dms/jbossway/carousel_jbossway_bkg.gif);
 	background-size:cover;
 	position:relative;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
 
 div#mainMenu {
