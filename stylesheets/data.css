@@ -4,9 +4,19 @@
 @import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
 
 @font-face {
+ font-family: "Eraser Dust";
+ src: url("../fonts/erasdust.eot") /* EOT file for IE */
+}
+
+
+@font-face {
+	font-family:"Eraser Dust";
+	src:url(../fonts/erasdust.ttf);	
+}
+
 body {
 	margin:0;	
-	background-color:#33333;
+	background-color:#333333;
 }
 
 h1.label {
@@ -16,13 +26,12 @@ h1.label {
 div#animationBox {
 	width:650px;
 	height:400px;
-	background-color:rgba(2,68,67,1.00);	
-	background-image:url(http://www.jboss.org/dms/jbossway/carousel_jbossway_bkg.gif);
-	background-size:cover;
+	/*background-color:rgba(2,68,67,1.00);*/	
+	background-image:url(../images/carousel_jbossway_rev.jpg);
 	position:relative;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+}
+div#animationBox a:hover {
+	text-decoration:none;	
 }
 
 div#mainMenu {
@@ -33,12 +42,17 @@ div#mainMenu {
 	left:27px;
 }
 div#cdiHeading {
+	font-family:"Eraser Dust";
+	color:white;
+	font-size:50px;
 	position:absolute;
 	left:90px;
 	top:20px;
 	width:93px;
 	height:37px;
-	background-image:url(../images/cdiheading.png);	
+	padding:0;
+	line-height:1em;
+	/*background-image:url(../images/cdiheading.png);	*/
 }
 
 
@@ -99,7 +113,9 @@ div.displayBox a.closeBtn {
 }
 
 div.displayBox h1 {
-	font-family: 'Walter Turncoat', cursive;
+	/*font-family: 'Walter Turncoat', cursive;*/
+	font-family:"Eraser Dust";
+	font-weight:bold;
 	padding:0;
 	position:absolute;
 	margin:0;
@@ -145,13 +161,15 @@ div#cloudDiv {
 div.mainMenu a,
 div.mainMenu,
 div#mainMenu div a {
-	font-family: 'Walter Turncoat', cursive;	
+	/*font-family: 'Walter Turncoat', cursive;	*/
+	font-family:"Eraser Dust";
 	color:white;
-	font-size:18px;	
+	font-size:22px;	
 	position:absolute;
 	z-index:1000;
 	cursor:pointer;
 	text-align:center;
+	line-height:1.1em;
 }
 
 /* Links Inside Non-relational */
@@ -166,11 +184,11 @@ a#modeShapeJCRBtn {
 /* Links Inside Relational */	
 a#hibernateBtn {
 	left:20%;
-	top:32%;
+	top:35%;
 }
 a#modeShapeJDBCBtn {
 	left:21%;
-	top:52%;
+	top:55%;
 }
 /* Overlap area - Relational <--> Non-Relational*/
 a#txBtn {
@@ -197,7 +215,7 @@ a#jCloudsBtn {
 	top:40%;
 }
 a#cdmiBtn {
-	left:58%;
+	left:53%;
 	top:70%;
 }
 
