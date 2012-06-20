@@ -3,6 +3,7 @@
 /* Import fonts */
 @import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
 
+@font-face {
 body {
 	margin:0;	
 	background-color:#33333;
