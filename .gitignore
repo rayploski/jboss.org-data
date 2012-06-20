@@ -8,3 +8,7 @@ _tmp
 .sass-cache
 .awestruct
 *.swp
+
+_config/site.yml
+
+js/redhatdata.js
