@@ -1,5 +1,6 @@
 // JavaScript Document
 // Sets all animations within the JBoss Data front page.
+/**
 
 // INIT functions
 $(function() {
