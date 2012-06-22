@@ -8,7 +8,6 @@
  src: url("../fonts/erasdust.eot") /* EOT file for IE */
 }
 
-
 @font-face {
 	font-family:"Eraser Dust";
 	src:url(../fonts/erasdust.ttf);	
@@ -20,7 +19,8 @@ body {
 }
 
 h1.label {
-	font-family: 'Walter Turncoat', cursive;	
+	/*font-family: 'Walter Turncoat', cursive;	*/
+	font-family:"Eraser Dust";
 }
 
 div#animationBox {
@@ -91,7 +91,9 @@ div.displayBox {
 	height:232px;
 	padding:10px;
 	background-image:url(../images/chalkDialogOutline.png);
+	background-repeat:no-repeat;
 	position:absolute;
+	
 	left:-500px;
 	top:50px;
 	color:white;
@@ -109,7 +111,12 @@ div.displayBox p {
 div.displayBox p,
 div.displayBox a.closeBtn {
 	position:absolute;
-	
+}
+
+div.long-text {
+	height:282px;
+	background:none;
+	background-image:url(../images/chalkDialogOutlineLong.png);
 }
 
 div.displayBox h1 {
